@@ -8,6 +8,13 @@ O projeto está disponível em: https://www.keycloak.org
 
 # Por que utilizar o Keycloak?
 
+Para ter soluções stateless é importante não manter sessão de usuário logado na aplicação, pois isso dificulta o escalonamento vertical de uma aplicação. 
+
+Com essa solução é possível tirar a responsabilidade de manter a sessão de usuário logado da aplicação e delegar para o keycloak. 
+
+Além de gerenciar os usuários logados na aplicação, o keylcloak é uma solução completa de gestão de identidade, capaz de gerir perfis de acesso, manter conta de usuário, integrar com LDAP, fazer SSO com kerberus e outras funcionalidades. 
+
+Existem outras soluções parecidas, porém a comunidade não é tão ativa como a do keycloak que é mantida pela grande empresa Redhat.
 
 
 # Instalação
@@ -69,6 +76,15 @@ Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycl
 
 ## Customização de telas
 
+É possível mudar completamente a tela de login, gestão da conta do usuário e administração. 
+
+A recomendação é não fazer alterações da tela de administração, pois dificulta a atualização da versão do keycloak.
+
+Exemplo:
+![Tema](imagens/theme.png)
+
+
+Referência: https://www.keycloak.org/docs/latest/server_development/#_themes
 
 ## Integrando uma aplicação Web
 
@@ -78,15 +94,15 @@ Abordaremos a integração com o keycloak.js que leva 3 minutos. Segue os passos
 
 1. Crie um cliente no keycloak chamado app com "Access Type" igual a "public" e com "Standard Flow Enabled" habilitado.
 
+![Configuração do Cliente](imagens/client.png)
+
 2. Acesse a aba Installation, escolhe o tipo Keycloak OIDC JSON e baixe o json. Essa é o arquivo de integração.
+
+![Instalação](imagens/instalacao.png)
 
 3. Coloque o arquivo keycloak.json e [index.html](app/index.html) em um servidor web qualquer e acesse a página index.html.
 
-
-
-
-
-
+![Instalação](imagens/app.png)
 
 
 
