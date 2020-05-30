@@ -6,6 +6,8 @@
 
 Baixe o keycloak, descompacte e execute o standalone.sh ou standalone.bat se estiver utilizando windows.
 
+Acesse: http://localhost:8080
+
 Referência: https://www.keycloak.org/docs/latest/server_installation/index.html#standalone-boot-script
 
 ## Instalação em HA (ambiente de produção)
@@ -21,6 +23,15 @@ Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
 ### Helm
 
-https://github.com/codecentric/helm-charts/tree/master/charts/keycloak
+Seguem algumas informações importantes do helm:
+
+* Defina a quantidade de réplicas para no mínimo 2;
+* A customização do tema precisa ficar em uma imagem docker customizada;
+* Defina limites de CPU e memória. O keycloak pode derrubar o node se isso não for configurado.
+* Configure o parâmetro "nginx.ingress.kubernetes.io/affinity: cookie" no ingress. Ele ajuda a criar uma afinidade por node e otimização a performance.
+* Configure o parâmetro "nginx.ingress.kubernetes.io/proxy-buffer-size: 128k" no ingress, caso contrário pode ocorrer problemas na autenticação por causa do tamanho da requisição.
+* 
+
+Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycloak
 
 
