@@ -4,7 +4,7 @@ O keycloak é um projeto open-source de Gestão de Identidade mantido pela Redha
 
 Os principais protocolos utilizandos são o OpenID e o SAML. 
 
-O projeot está disponível em: https://www.keycloak.org
+O projeto está disponível em: https://www.keycloak.org
 
 # Por que utilizar o Keycloak?
 
@@ -14,13 +14,26 @@ O projeot está disponível em: https://www.keycloak.org
 
 ## Instalação em Standalone (ambiente de teste)
 
-Baixe o keycloak, descompacte e execute o standalone.sh ou standalone.bat.
+Para esse tipo de instalação é necessário ter o docker instalado. Caso não tenha o docker instalado execute o comando abaixo:
 
-Acesse: http://localhost:8080
 
-![Kecloak em Standalone](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/standalone-boot-files.png)
+```bash
+#mac ou linux
+curl https://get.docker.com | bash
+```
 
-Referência: https://www.keycloak.org/docs/latest/server_installation/index.html#standalone-boot-script
+Execute o keycloak:
+
+```bash
+docker run -e KEYCLOAK_USER=keycloak -e KEYCLOAK_PASSWORD=123456 jboss/keycloak
+```
+
+* Acesse: http://localhost:8080
+* Login: keycloak
+* Senha: 123456
+
+
+Referência: https://github.com/keycloak/keycloak-containers/blob/10.0.1/server/README.md
 
 ## Instalação em HA (ambiente de produção)
 
@@ -46,8 +59,10 @@ Seguem algumas informações importantes:
 
 Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycloak
 
-### Customização de telas
+## Customização de telas
 
 
-### Customização 
+## Integrando uma aplicação Web
+
+
 
