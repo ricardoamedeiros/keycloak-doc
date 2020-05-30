@@ -23,7 +23,7 @@ Referência: https://www.keycloak.org/docs/latest/server_installation/index.html
 Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
 
-### Helm
+### Boas práticas para utilização do HELM
 
 Seguem algumas informações importantes do helm:
 
