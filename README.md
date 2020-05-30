@@ -72,7 +72,7 @@ Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycl
 
 ## Integrando uma aplicação Web
 
-O integração pode ser feita por qualquer fluxo previsto no OpenId (Authorization Code, Password, Implict, Client Credentials). Existem vários [frameworks compartíveis](https://www.keycloak.org/docs/latest/securing_apps/index.html#what-are-client-adapters), porém a forma mais simples e indicada de ser realizar a integração é utilizando o keycloak.js. 
+A integração pode ser feita por qualquer fluxo previsto no OpenId (Authorization Code, Password, Implict, Client Credentials). Existem vários [frameworks compartíveis](https://www.keycloak.org/docs/latest/securing_apps/index.html#what-are-client-adapters), porém a forma mais simples e indicada de ser realizar a integração é utilizando o keycloak.js. 
 
 Abordaremos a integração com o keycloak.js que leva 3 minutos. Segue os passos necessários:
 
@@ -80,7 +80,8 @@ Abordaremos a integração com o keycloak.js que leva 3 minutos. Segue os passos
 
 2. Acesse a aba Installation, escolhe o tipo Keycloak OIDC JSON e baixe o json. Essa é o arquivo de integração.
 
-3. Baixe coloque na mesma pagína do [index.html](app/index.html) e execute em um servidor web.
+3. Coloque o arquivo keycloak.json e [index.html](app/index.html) em um servidor web qualquer e acesse a página index.html.
+
 
 
 
