@@ -25,10 +25,10 @@ Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
 ### Boas práticas para utilização do HELM
 
-Seguem algumas informações importantes do helm:
+Seguem algumas informações importantes:
 
-* Defina a quantidade de réplicas para no mínimo 2;
-* A customização do tema precisa ficar em uma imagem docker customizada;
+* Defina a quantidade de réplicas para no mínimo 2 (duas);
+* A customização do tema precisa ficar em uma imagem [docker customizada](https://github.com/codecentric/helm-charts/tree/master/charts/keycloak#providing-a-custom-theme);
 * Defina limites de CPU e memória. O keycloak pode derrubar o node se isso não for configurado.
 * Configure o parâmetro "nginx.ingress.kubernetes.io/affinity: cookie" no ingress. Ele ajuda a criar uma afinidade por node e otimização a performance.
 * Configure o parâmetro "nginx.ingress.kubernetes.io/proxy-buffer-size: 128k" no ingress, caso contrário pode ocorrer problemas na autenticação por causa do tamanho da requisição.
