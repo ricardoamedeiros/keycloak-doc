@@ -52,6 +52,11 @@ Referência: https://www.keycloak.org/docs/latest/server_installation/index.html
 
 Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
+* Instalação do repo:
+```bash
+helm install codecentric/keycloak
+```
+
 * Instalação do helm:
 
 ```bash
