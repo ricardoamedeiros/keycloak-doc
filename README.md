@@ -4,9 +4,11 @@
 
 ## Instalação em Standalone (ambiente de teste)
 
-Baixe o keycloak, descompacte e execute o standalone.sh ou standalone.bat se estiver utilizando windows.
+Baixe o keycloak, descompacte e execute o standalone.sh ou standalone.bat.
 
 Acesse: http://localhost:8080
+
+![Kecloak em Standalone](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/standalone-boot-files.png)
 
 Referência: https://www.keycloak.org/docs/latest/server_installation/index.html#standalone-boot-script
 
