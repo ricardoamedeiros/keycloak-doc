@@ -45,6 +45,13 @@ Referência: https://www.keycloak.org/docs/latest/server_installation/index.html
 
 Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
+* Instalação do helm:
+
+```bash
+## Crie o namespace no kubernetes com o nome de keycloak antes de executar o comando.
+## A senha deve ter letras e número e no mínimo 8 caracteres
+helm install keycloak --set keycloak.password=abcd1234,keycloak.persistence.dbVendor=postgres,keycloak.persistence.deployPostgres=true,keycloak.replicas=2  codecentric/keycloak -n keycloak
+```
 
 ### Boas práticas para utilização do HELM
 
@@ -64,6 +71,24 @@ Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycl
 
 
 ## Integrando uma aplicação Web
+
+O integração pode ser feita por qualquer fluxo previsto no OpenId (Authorization Code, Password, Implict, Client Credentials). Existem vários [frameworks compartíveis](https://www.keycloak.org/docs/latest/securing_apps/index.html#what-are-client-adapters), porém a forma mais simples e indicada de ser realizar a integração é utilizando o keycloak.js. 
+
+Abordaremos a integração com o keycloak.js que leva 3 minutos. Segue os passos necessários:
+
+1. Crie um cliente no keycloak chamado app com "Access Type" igual a "public" e com "Standard Flow Enabled" habilitado.
+
+2. Acesse a aba Installation, escolhe o tipo Keycloak OIDC JSON e baixe o json. Essa é o arquivo de integração.
+
+3. Baixe coloque na mesma pagína do [index.html](app/index.html) e execute em um servidor web.
+
+
+
+
+
+
+
+
 
 
 
