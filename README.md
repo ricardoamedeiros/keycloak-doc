@@ -1,5 +1,15 @@
 # Keycloak
 
+O keycloak é um projeto open-source de Gestão de Identidade mantido pela Redhat com a comunidade altamente ativa. 
+
+Os principais protocolos utilizandos são o OpenID e o SAML. 
+
+O projeot está disponível em: https://www.keycloak.org
+
+# Por que utilizar o Keycloak?
+
+
+
 # Instalação
 
 ## Instalação em Standalone (ambiente de teste)
@@ -36,4 +46,8 @@ Seguem algumas informações importantes:
 
 Referência: https://github.com/codecentric/helm-charts/tree/master/charts/keycloak
 
+### Customização de telas
+
+
+### Customização 
 
