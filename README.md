@@ -54,7 +54,7 @@ Uma forma simples de configurar o keycloak em HA é utilizando HELM.
 
 * Instalação do repo:
 ```bash
-helm install codecentric/keycloak
+helm repo add codecentric https://codecentric.github.io/helm-charts
 ```
 
 * Instalação do helm:
