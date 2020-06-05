@@ -68,8 +68,6 @@ helm install keycloak --set keycloak.password=abcd1234,keycloak.persistence.dbVe
 * Upgrade do helm:
 
 ```bash
-## Crie o namespace no kubernetes com o nome de keycloak antes de executar o comando.
-## A senha deve ter letras e número e no mínimo 8 caracteres
 helm upgrade keycloak --set keycloak.password=abcd1234,keycloak.persistence.dbVendor=postgres,keycloak.persistence.deployPostgres=true,keycloak.replicas=3  codecentric/keycloak -n keycloak
 ```
 
