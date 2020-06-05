@@ -32,7 +32,7 @@ curl https://get.docker.com | bash
 Execute o keycloak:
 
 ```bash
-docker run -e KEYCLOAK_USER=keycloak -e KEYCLOAK_PASSWORD=123456 jboss/keycloak
+docker run -e KEYCLOAK_USER=keycloak -e KEYCLOAK_PASSWORD=123456 -p 8080:8080 jboss/keycloak
 ```
 
 * Acesse: http://localhost:8080
